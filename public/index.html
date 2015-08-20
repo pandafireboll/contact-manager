@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="addressBook">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Address Book</title>
+
+	<!-- vendor -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<script src="vendor/jquery-1.11.3.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<script src="vendor/angular.min.js"></script>
+	<script src="vendor/angular-route.min.js"></script>
+
+	<!-- app -->
+	<script src="app/app.js"></script>
+	<script src="app/partials/list/list.js"></script>
+ 	<script src="app/partials/add/addContact.js"></script>
+	<script src="app/partials/edit/edit.js"></script> 
+	<script src="app/shared/getContacts.js"></script>
+</head>
+<body>
+	<div ng-view></div>
+</body>
+</html>

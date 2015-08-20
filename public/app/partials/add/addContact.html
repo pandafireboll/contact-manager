@@ -1,0 +1,20 @@
+<div class="container" ng-controller="AddController">
+	<h1>New Contact</h1>
+	<hr>
+	<form name="addContact" novalidate>
+		<div class="form-group">
+	  		<label>First Name</label>: <input class="form-control" type="text" name="firstName" ng-model="firstName" required />
+	  		<p ng-show="addContact.firstName.$invalid && !addContact.firstName.$pristine" class="help-block">Please enter first name.</p>
+		</div>
+		<div class="form-group">
+	  		<label>Last Name</label>: <input class="form-control" type="text" name="lastName" ng-model="lastName" required />
+	  		<p ng-show="addContact.lastName.$invalid && !addContact.lastName.$pristine" class="help-block">Please enter last name.</p>
+		</div>
+		<div class="form-group">
+	  		<label>Email</label>: <input class="form-control" type="email" name="email" ng-model="email" required />
+	  		<p ng-show="addContact.email.$invalid && !addContact.email.$pristine" class="help-block">Please enter email.</p>
+		</div>
+		<button class="btn btn-block btn-warning" ng-disabled="addContact.$invalid" ng-click="add()">Submit</button>
+		<button class="btn btn-block btn-primary" ng-click="go('/')">View Directory</button>
+	</form>
+</div>

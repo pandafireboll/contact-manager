@@ -1,0 +1,24 @@
+<div class="container" ng-controller="ListController">
+	<h1>Directory</h1>
+	<hr>
+	<div class="row">
+		<div class="form-group">
+			<input class="form-control" ng-model="searchText" />
+		</div>
+	</div>
+	<hr>
+	<div class="row" ng-repeat="contact in contacts | filter:searchText | orderBy:'lastName'">
+		<div class="col-md-6 lead" ng-click="getUser(contact)">
+			{{contact.lastName}}, {{contact.firstName}}
+		</div>
+		<div class="col-md-6">
+			<button type="submit" class="btn btn-danger" ng-click="Delete(contact.id)">Delete</button>
+		</div>
+	</div>
+	<hr>
+	<div class="row">
+		<div class="col-md-12">
+			<button class="btn btn-block btn-primary" ng-click="go('/addContact')">Add Contact</button>
+		</div>
+	</div>
+</div>

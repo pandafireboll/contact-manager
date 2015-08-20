@@ -1,0 +1,22 @@
+<div class="container" ng-controller="EditController">
+	<h1>{{contact.firstName}} {{contact.lastName}} - {{contact.email}}</h1>
+	<hr>
+	<form name="editContact" novalidate>
+		<div class="form-group">
+	  		<input class="form-control" type="text" name="firstName" ng-init="contact.firstName" ng-model="contact.firstName" required />
+	  		<p ng-show="editContact.firstName.$invalid && !editContact.firstName.$pristine" class="help-block">Please enter first name.</p>
+		</div>
+		<div class="form-group">
+	  		<input class="form-control" type="text" name="lastName" ng-init="contact.lastName" ng-model="contact.lastName" required />
+	  		<p ng-show="editContact.lastName.$invalid && !editContact.lastName.$pristine" class="help-block">Please enter last name.</p>
+		</div>
+		<div class="form-group">
+	  		<input class="form-control" type="email" name="email" ng-init="contact.email" ng-model="contact.email" required />
+	  		<p ng-show="editContact.email.$invalid && !editContact.email.$pristine" class="help-block">Please enter email.</p>
+		</div>
+		<hr>
+		<button class="btn btn-block btn-warning" ng-disabled="editContact.$invalid" ng-click="Update(contact)">Update</button>
+		<button class="btn btn-block btn-primary" ng-click="go('/')">View Directory</button>
+	</form>
+</div>
+	
