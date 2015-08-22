@@ -1,6 +1,6 @@
-var app = angular.module('addressBook', ['ngRoute']);
-var Users = null;
-var User = null;
+var app = angular.module('addressBook', ['ngRoute']),
+    Users = null,
+    User = null;
 
 app.config(['$routeProvider',
 	function($routeProvider){
