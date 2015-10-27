@@ -1,5 +1,5 @@
 {
-	"name": "Basic Server for Prototypes",
+	"name": "contactmanager",
 	"description": "This is a basic server used for simple prototypes",
 	"version": "0.0.1",
 	"main":"server.js",
